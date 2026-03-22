@@ -27,7 +27,7 @@ public class ExpensesController : ControllerBase
     }
 
     [HttpGet] //Listar todas as despesas
-    [ProducesResponseType(typeof(ResponseExpensesJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseAllExpensesJson), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> GetAllExpenses(
         [FromServices] IGetAllExpenseUseCase useCase

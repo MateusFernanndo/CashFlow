@@ -28,7 +28,7 @@ public static class DependencyInjectionExtension
         var version = new Version(8, 0, 35);
         var serverVersion = new MySqlServerVersion(version);
                 
-        services.AddDbContext<CashFlowDBContext>(config => config.UseMySql(conectionString, serverVersion)); ;
+        services.AddDbContext<CashFlowDBContext>(config => config.UseMySql(conectionString, serverVersion));
     }
 }
 
