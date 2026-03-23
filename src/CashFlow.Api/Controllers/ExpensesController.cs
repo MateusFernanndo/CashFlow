@@ -68,7 +68,7 @@ public class ExpensesController : ControllerBase
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Update(
-        [FromServices] UpdateExpenseUseCase useCase,
+        [FromServices] IUpdateExpenseUseCase useCase,
         [FromRoute] long Id,
         [FromBody] RequestExpenseJson request)
     {
