@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CashFlow.Communication.Response;
 using CashFlow.Domain.Repositories.Expenses;
+using CashFlow.Domain.Services.LoggerUser;
 using CashFlow.Exception;
 using CashFlow.Exception.ExceptionsBase;
 
@@ -10,16 +11,19 @@ public class GetExpenseByIdUseCase : IGetExpenseByIdUseCase
 {
     private readonly IExpenseReadOnlyRepository _repository;
     private readonly IMapper _mapper;
+    private readonly ILoggedUser _loggedUser;
 
-    public GetExpenseByIdUseCase(IExpenseReadOnlyRepository repository, IMapper mapper)
+    public GetExpenseByIdUseCase(IExpenseReadOnlyRepository repository, IMapper mapper, ILoggedUser loggedUser)
     {
         _repository = repository;
         _mapper = mapper;
+        _loggedUser = loggedUser;
     }
 
     public async Task<ResponseExpensesJson> Execute(long id)
     {
-        var result = await _repository.GetById(id);
+        var loggedUser = await _loggedUser.Get();
+        var result = await _repository.GetById(loggedUser, id);
 
         if (result is null) //tratar erro caso id inválido
         {

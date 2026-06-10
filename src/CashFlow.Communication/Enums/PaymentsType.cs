@@ -2,7 +2,7 @@
 public enum PaymentsType
 {
     Cash = 0,
-    CreditCArd = 1,
+    CreditCard = 1,
     DebitCard = 2,
     EletronicTransfer = 3
 }

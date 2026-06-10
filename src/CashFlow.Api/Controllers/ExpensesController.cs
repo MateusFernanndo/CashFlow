@@ -5,12 +5,14 @@ using CashFlow.Application.UseCase.Expenses.Register;
 using CashFlow.Application.UseCase.Expenses.Uptade;
 using CashFlow.Communication.Request;
 using CashFlow.Communication.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CashFlow.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class ExpensesController : ControllerBase
 {
     [HttpPost] //Registar despesas
@@ -63,16 +65,17 @@ public class ExpensesController : ControllerBase
         await useCase.Execute(id);
         return NoContent();
     }
-    [HttpPut]
+    [HttpPut] //atualizar despesa
+    [Route("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Update(
         [FromServices] IUpdateExpenseUseCase useCase,
-        [FromRoute] long Id,
+        [FromRoute] long id,
         [FromBody] RequestExpenseJson request)
     {
-        await useCase.Execute(Id, request);
+        await useCase.Execute(id, request);
         return NoContent();
     }
 

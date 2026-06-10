@@ -9,6 +9,8 @@
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/CommomTestUtilities/CommomTestUtilities.csproj" Id="e7642836-646d-4d72-8e24-06cf667051bf" />
+    <Project Path="tests/UseCases.Tests/UseCases.Tests.csproj" Id="e196dcd0-0932-425d-b06d-53eb37578bfa" />
     <Project Path="tests/Validators.Tests/Validators.Tests.csproj" Id="f9888105-9777-4d56-8789-8141bbd4dd48" />
+    <Project Path="tests/WebApi.Test/WebApi.Test.csproj" Id="bd9279c2-a1fc-419f-a67e-1fefb9dfe305" />
   </Folder>
 </Solution>

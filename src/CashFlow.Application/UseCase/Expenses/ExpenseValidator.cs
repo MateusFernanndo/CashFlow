@@ -14,7 +14,7 @@ public class ExpenseValidator : AbstractValidator<RequestExpenseJson>
         //a data não pode ser do futuro, apenas de hoje para tras
         RuleFor(expense => expense.Date).LessThanOrEqualTo(DateTime.UtcNow).WithMessage(ResourceErrorMessages.EXPENSES_CANNOT_BE_FOR_THE_FUTURE);
         //Payment Type apenas os definidos
-        RuleFor(expense => expense.PaymentType).IsInEnum().WithMessage(ResourceErrorMessages.PAYMENT_TYPE_INVALID);
+        RuleFor(expense => expense.PaymentsType).IsInEnum().WithMessage(ResourceErrorMessages.PAYMENT_TYPE_INVALID);
 
     }
 }

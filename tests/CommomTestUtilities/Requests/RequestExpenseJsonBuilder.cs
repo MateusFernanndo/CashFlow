@@ -3,7 +3,7 @@ using CashFlow.Communication.Enums;
 using CashFlow.Communication.Request;
 
 namespace CommomTestUtilities.Requests;
-public class RequestExpenseRegisterJsonBuilder
+public class RequestExpenseJsonBuilder
 {
     public static RequestExpenseJson Build()
     {
@@ -12,7 +12,7 @@ public class RequestExpenseRegisterJsonBuilder
             .RuleFor(r => r.Title, faker => faker.Commerce.ProductName())
             .RuleFor(r => r.Description, faker => faker.Commerce.ProductDescription())
             .RuleFor(r => r.Date, faker => faker.Date.Past())
-            .RuleFor(r => r.PaymentType, faker => faker.PickRandom<PaymentsType>())
+            .RuleFor(r => r.PaymentsType, faker => faker.PickRandom<PaymentsType>())
             .RuleFor(r => r.Amount, faker => faker.Random.Decimal(min: 1, max: 1000));
         
         /*return new RequestExpenseRegisterJson
@@ -21,7 +21,7 @@ public class RequestExpenseRegisterJsonBuilder
             Date = DateTime.Now.AddDays(-1),
             Description = "description",
             Title = "Apple",
-            PaymentType = CashFlow.Communication.Enums.PaymentsType.CreditCArd
+            PaymentsType = CashFlow.Communication.Enums.PaymentsType.CreditCArd
         };*/
 
 

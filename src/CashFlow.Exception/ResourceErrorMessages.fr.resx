@@ -120,11 +120,32 @@
   <data name="AMOUNT_MUST_BE_GREATER_THAN_ZERO" xml:space="preserve">
     <value>Le montant doit être supérieur à zéro.</value>
   </data>
+  <data name="EMAIL_ALREADY_REGISTERED" xml:space="preserve">
+    <value>L'adresse électronique existe déjà.</value>
+  </data>
+  <data name="EMAIL_EMPTY" xml:space="preserve">
+    <value>Email vide</value>
+  </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>Courriel invalide</value>
+  </data>
+  <data name="EMAIL_OR_PASSWORD_INVALID" xml:space="preserve">
+    <value>Adresse e-mail et/ou mot de passe invalides.</value>
+  </data>
   <data name="EXPENSES_CANNOT_BE_FOR_THE_FUTURE" xml:space="preserve">
     <value>Les dépenses ne peuvent pas être prévues pour l'avenir.</value>
   </data>
   <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
     <value>Garde-manger introuvable</value>
+  </data>
+  <data name="INVALID_PASSWORD" xml:space="preserve">
+    <value>Votre mot de passe doit comporter au moins 8 caractères et contenir au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial (par exemple !, ?, *, .).</value>
+  </data>
+  <data name="NAME_EMPTY" xml:space="preserve">
+    <value>Nom vide</value>
+  </data>
+  <data name="PASSWORD_DIFFERENT_CURRENT_PASSWORD" xml:space="preserve">
+    <value>Le mot de passe saisi est différent du mot de passe actuel.</value>
   </data>
   <data name="PAYMENT_TYPE_INVALID" xml:space="preserve">
     <value>Ce mode de paiement n'est pas valide.</value>
