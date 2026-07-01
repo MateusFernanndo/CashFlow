@@ -150,6 +150,9 @@
   <data name="PAYMENT_TYPE_INVALID" xml:space="preserve">
     <value>Ce mode de paiement n'est pas valide.</value>
   </data>
+  <data name="TAG_TYPE_NOT_SUPPORTED" xml:space="preserve">
+    <value>Ce type de balise n'est pas pris en charge.</value>
+  </data>
   <data name="TITLE_REQUIRED" xml:space="preserve">
     <value>Le titre est requis.</value>
   </data>
